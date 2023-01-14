@@ -81,6 +81,21 @@ namespace ProjetDotNet.Controllers
             return View();
         }
         
+        [Route ("getMyPosts")]
+        public IActionResult GetMyPosts()
+        {
+            User user = (User)HttpContext.Items["user"]!;
+            Console.WriteLine(user.Id);
+            UnitOfWork unitOfWork = new UnitOfWork(AppDbContext.Instance);
+            IEnumerable<Post> posts = unitOfWork.Posts.GetPostsByAuthor(user.Id);
+            
+            ViewBag.posts = posts;
+            ViewBag.user = user;
+            
+            return View();
+        }
+        
+        
         
         
     }

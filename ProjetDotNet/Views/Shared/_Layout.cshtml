@@ -1,6 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http
-@inject IHttpContextAccessor HttpContextAccessor
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +34,7 @@
                                             </li>
                     
                     <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home">MyPosts</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller='Post' asp-action="GetMyPosts">My Posts</a>
                         </li>
                     
 

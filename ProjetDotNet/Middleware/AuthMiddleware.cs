@@ -16,7 +16,8 @@ namespace ProjetDotNet.Middlewares
             "/post/create",
             "/reply/create",
             "/post?id=1",
-            "/post"
+            "/post",
+            "/post/getMyPosts",
         };
 
         public AuthMiddleware(RequestDelegate next)
